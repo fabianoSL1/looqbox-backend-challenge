@@ -2,6 +2,7 @@ package fabiano.poke.services;
 
 import fabiano.poke.dtos.PokemonHighlight;
 import fabiano.poke.enums.SortOption;
+import fabiano.poke.exceptions.PokemonApiException;
 import fabiano.poke.external.pokemonApi.PokemonClient;
 import fabiano.poke.external.pokemonApi.pokemonApiDtos.PokemonResponse;
 import fabiano.poke.sortMethods.SortMethodFactory;
@@ -15,12 +16,16 @@ public class PokemonService {
 
     private final PokemonClient pokemonClient;
 
-    PokemonService(PokemonClient pokemonClient) {
+    public PokemonService(PokemonClient pokemonClient) {
         this.pokemonClient = pokemonClient;
     }
 
     public List<PokemonResponse> getAll() {
-        return this.pokemonClient.listAll().getResults();
+        try {
+            return this.pokemonClient.listAll().getResults();
+        } catch (Exception e) {
+            throw new PokemonApiException("not load pokemons");
+        }
     }
 
     public List<PokemonResponse> getByName(String name) {

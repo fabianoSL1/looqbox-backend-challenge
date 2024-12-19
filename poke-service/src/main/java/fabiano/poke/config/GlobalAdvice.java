@@ -1,5 +1,6 @@
 package fabiano.poke.config;
 
+import fabiano.poke.exceptions.PokemonApiException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpStatus;
@@ -23,5 +24,12 @@ public class GlobalAdvice {
     public ResponseEntity<String> handleGenericException(RuntimeException exception) {
         log.error(exception.getMessage(), exception);
         return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Internal Server Error");
+    }
+
+    @ExceptionHandler(PokemonApiException.class)
+    public ResponseEntity<String> handlePokemonApiException(PokemonApiException exception) {
+        log.error(exception.getMessage(), exception);
+
+        return ResponseEntity.status(HttpStatus.BAD_GATEWAY).body(exception.getMessage());
     }
 }

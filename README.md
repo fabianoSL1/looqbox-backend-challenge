@@ -7,14 +7,11 @@ A implementação é diferente da descrita no livro *Entendendo Algoritmos*, mas
 
 ## Solução
 
-### PokemonClient
-Componente responsavel por realizar as chamadas http para a api.
+**PokemonClient:** componente responsavel por realizar as chamadas http para a api.
 
-### SortMethod
-Interface que executa a ordenação de uma lista de pokemons.
+**SortMethod:** interface que executa a ordenação de uma lista de pokemons.
 
-### SortMethodAlphabetic e SortMethodLength
-Implementações de SortMethod que utilizam QuickSort.
+**SortMethodAlphabetic e SortMethodLength:** implementações de SortMethod que utilizam QuickSort.
 
 ![diagrama](./diagrama.png)
 
@@ -23,8 +20,19 @@ Implementações de SortMethod que utilizam QuickSort.
 - testes de pokemonController com PokemonService mockado.
 - Testes unitarios PokemonService para ordenação.
 
+## Rotas
+### /Pokemons
+- **query:** nome do pokemon (opcional)
+- **sort:** alphabetic e length (opcioanl)
+
+### /Pokemons/highlight
+- **query:** nome do pokemon (opcional)
+- **sort:** alphabetic e length (opcioanl)
+
+exemplo de requisição `GET /pokemons?query=saur&sort=length`
+
 ## Local
-O serviço roda na porta `8080`
+porta `8080`
 
 ```bash 
 docker compose up -d

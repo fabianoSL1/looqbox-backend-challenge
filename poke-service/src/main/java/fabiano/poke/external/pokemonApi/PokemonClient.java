@@ -1,6 +1,5 @@
 package fabiano.poke.external.pokemonApi;
 
-import fabiano.poke.exceptions.PokemonApiException;
 import fabiano.poke.external.pokemonApi.pokemonApiDtos.PokemonListResponse;
 import org.springframework.boot.web.client.RestTemplateBuilder;
 import org.springframework.stereotype.Component;

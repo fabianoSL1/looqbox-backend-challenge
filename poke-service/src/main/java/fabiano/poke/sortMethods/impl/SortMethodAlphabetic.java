@@ -1,10 +1,11 @@
-package fabiano.poke.sortMethods;
+package fabiano.poke.sortMethods.impl;
 
 import fabiano.poke.external.pokemonApi.pokemonApiDtos.PokemonResponse;
+import fabiano.poke.sortMethods.SortMethod;
 
 import java.util.List;
 
-public class SortMethodLength implements SortMethod {
+public class SortMethodAlphabetic implements SortMethod {
 
     @Override
     public void execute(List<PokemonResponse> pokemonList) {
@@ -27,7 +28,7 @@ public class SortMethodLength implements SortMethod {
         for (int j = start; j < end; j++) {
             var current = pokemonList.get(j);
 
-            if (current.getName().length() <= pivot.getName().length()) {
+            if (current.getName().compareTo(pivot.getName()) < 0) {
                 i++;
 
                 swap(pokemonList, i, j);

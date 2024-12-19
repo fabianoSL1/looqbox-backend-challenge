@@ -1,11 +1,10 @@
-package fabiano.poke.facotories;
+package fabiano.poke.sortMethods;
 
 
 import fabiano.poke.enums.SortOption;
 import fabiano.poke.exceptions.SortMethodNotFound;
-import fabiano.poke.sortMethods.SortMethod;
-import fabiano.poke.sortMethods.SortMethodAlphabetic;
-import fabiano.poke.sortMethods.SortMethodLength;
+import fabiano.poke.sortMethods.impl.SortMethodAlphabetic;
+import fabiano.poke.sortMethods.impl.SortMethodLength;
 
 public class SortMethodFactory {
 

@@ -4,7 +4,7 @@ import fabiano.poke.dtos.PokemonHighlight;
 import fabiano.poke.enums.SortOption;
 import fabiano.poke.external.pokemonApi.PokemonClient;
 import fabiano.poke.external.pokemonApi.pokemonApiDtos.PokemonResponse;
-import fabiano.poke.facotories.SortMethodFactory;
+import fabiano.poke.sortMethods.SortMethodFactory;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

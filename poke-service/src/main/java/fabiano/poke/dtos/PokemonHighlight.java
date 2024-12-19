@@ -9,7 +9,12 @@ public class PokemonHighlight {
 
     public PokemonHighlight(String name, String highlight) {
         this.name = name;
-        this.highlight = highlight;
+
+        if (!highlight.isBlank()) {
+            this.highlight = name.replace(highlight, "<pre>" + highlight + "</pre>");
+        } else {
+            this.highlight = highlight;
+        }
     }
 
     public String getName() {

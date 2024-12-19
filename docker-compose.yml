@@ -1,0 +1,6 @@
+services:
+  poke-service:
+    container_name: "poke-service"
+    build: ./poke-service
+    ports:
+      - "8080:8080"

@@ -25,7 +25,7 @@ public class PokemonController {
     @GetMapping()
     public ResponseEntity<PokemonResult> getPokemon(
             @RequestParam(required = false) String query,
-            @RequestParam(required = false, defaultValue = "alphabetical") SortOption sort
+            @RequestParam(required = false, defaultValue = "alphabetic") SortOption sort
     ) {
         var pokemonList = query != null ? pokemonService.getByName(query) : pokemonService.getAll();
 
@@ -39,7 +39,7 @@ public class PokemonController {
     @GetMapping("/highlight")
     public ResponseEntity<PokemonHighlightResult> getPokemonHighlight(
             @RequestParam(required = false) Optional<String> query,
-            @RequestParam(required = false, defaultValue = "alphabetical") SortOption sort
+            @RequestParam(required = false, defaultValue = "alphabetic") SortOption sort
     ) {
         var pokemonList = query.isPresent() ? pokemonService.getByName(query.get()) : pokemonService.getAll();
 

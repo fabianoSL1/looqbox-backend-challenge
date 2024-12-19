@@ -1,7 +1,6 @@
 package fabiano.poke.services;
 
 import fabiano.poke.enums.SortOption;
-import fabiano.poke.external.pokemonApi.PokemonClient;
 import fabiano.poke.external.pokemonApi.pokemonApiDtos.PokemonResponse;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
@@ -32,7 +31,7 @@ public class PokemonServiceTest {
             createPokemonResponse("A")
         );
 
-        pokemonService.sort(toSort, SortOption.ALPHABETICAL);
+        pokemonService.sort(toSort, SortOption.ALPHABETIC);
 
         Assertions.assertEquals(expect.get(0).getName(), toSort.get(0).getName());
         Assertions.assertEquals(expect.get(1).getName(), toSort.get(1).getName());

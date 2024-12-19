@@ -14,7 +14,7 @@ public class SortMethodFactory {
                 return new SortMethodLength();
             }
 
-            case ALPHABETICAL -> {
+            case ALPHABETIC -> {
                 return new SortMethodAlphabetic();
             }
 

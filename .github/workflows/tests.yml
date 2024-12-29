@@ -17,4 +17,4 @@ jobs:
           distribution: 'temurin'
 
       - name: Run Tests
-        run: ./gradlew test
+        run: ./poke-service/gradlew test

@@ -9,6 +9,7 @@ jobs:
   build:
     name: Build and analyze
     runs-on: ubuntu-latest
+    environment: production
     defaults:
       run:
         working-directory: ./poke-service

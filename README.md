@@ -1,3 +1,6 @@
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=fabianoSL1_looqbox-backend-challenge&metric=alert_status)](https://sonarcloud.io/summary/overall?id=fabianoSL1_looqbox-backend-challenge)
+[![Coverage](https://sonarcloud.io/api/project_badges/measure?project=fabianoSL1_looqbox-backend-challenge&metric=coverage)](https://sonarcloud.io/summary/overall?id=fabianoSL1_looqbox-backend-challenge)
+
 ## Ordenação
 Utilizei o quicksort para fazer a ordenação tanto por ordem alfabetica quando por tamanho do nome. 
 
@@ -43,3 +46,4 @@ docker compose up -d
 
 https://poke-service-m9z6.onrender.com/pokemons
 
+[![SonarCloud](https://sonarcloud.io/images/project_badges/sonarcloud-white.svg)](https://sonarcloud.io/summary/new_code?id=fabianoSL1_looqbox-backend-challenge)

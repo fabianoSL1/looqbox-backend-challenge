@@ -1,4 +1,4 @@
-package fabiano.poke.external.pokemonApi.pokemonApiDtos;
+package fabiano.poke.external.pokemon.dtos;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 

@@ -1,4 +1,4 @@
-package fabiano.poke.external.pokemonApi.pokemonApiDtos;
+package fabiano.poke.external.pokemon.dtos;
 
 public class PokemonResponse {
     private String name;

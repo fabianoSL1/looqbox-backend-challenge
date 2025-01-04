@@ -1,7 +1,8 @@
 package fabiano.poke.services;
 
 import fabiano.poke.enums.SortOption;
-import fabiano.poke.external.pokemonApi.pokemonApiDtos.PokemonResponse;
+import fabiano.poke.external.pokemon.dtos.PokemonResponse;
+
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -18,7 +19,7 @@ public class PokemonServiceTest {
     private PokemonService pokemonService;
 
     @Test
-    public void givenList_whenSortedByAlphabet_thenSortedCorrectly() {
+    void givenList_whenSortedByAlphabet_thenSortedCorrectly() {
         var expect = List.of(
             createPokemonResponse("A"),
             createPokemonResponse("B"),
@@ -39,7 +40,7 @@ public class PokemonServiceTest {
     }
 
     @Test
-    public void givenList_whenSortedByLength_thenSortedCorrectly() {
+    void givenList_whenSortedByLength_thenSortedCorrectly() {
         var expect = List.of(
                 createPokemonResponse("A"),
                 createPokemonResponse("AA"),

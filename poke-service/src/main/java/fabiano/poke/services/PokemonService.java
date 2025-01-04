@@ -3,9 +3,10 @@ package fabiano.poke.services;
 import fabiano.poke.dtos.PokemonHighlight;
 import fabiano.poke.enums.SortOption;
 import fabiano.poke.exceptions.PokemonApiException;
-import fabiano.poke.external.pokemonApi.PokemonClient;
-import fabiano.poke.external.pokemonApi.pokemonApiDtos.PokemonResponse;
-import fabiano.poke.sortMethods.SortMethodFactory;
+import fabiano.poke.external.pokemon.PokemonClient;
+import fabiano.poke.external.pokemon.dtos.PokemonResponse;
+import fabiano.poke.sort.SortMethodFactory;
+
 import org.springframework.stereotype.Service;
 
 import java.util.List;

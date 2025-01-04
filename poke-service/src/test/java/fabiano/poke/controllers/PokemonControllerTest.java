@@ -21,7 +21,7 @@ public class PokemonControllerTest {
     private PokemonService pokemonService;
 
     @Test
-    public void givenValidRequest_whenPokemonServiceThrowsException_thenReturnsBadGateway() throws Exception {
+    void givenValidRequest_whenPokemonServiceThrowsException_thenReturnsBadGateway() throws Exception {
         Mockito.when(pokemonService.getAll()).thenThrow(new PokemonApiException("any exception"));
 
         mvc.perform(MockMvcRequestBuilders.get("/pokemons"))

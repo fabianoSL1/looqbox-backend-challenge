@@ -23,7 +23,7 @@ public class PokemonControllerIntegrationTest {
     private TestRestTemplate restTemplate;
 
     @Test
-    public void givenValidRequest_whenGetPokemon_thenOk() throws Exception {
+    void givenValidRequest_whenGetPokemon_thenOk() {
         var response = restTemplate.getForEntity("/pokemons", PokemonResult.class);
         Assertions.assertEquals(200, response.getStatusCode().value());
 
@@ -36,7 +36,7 @@ public class PokemonControllerIntegrationTest {
     }
 
     @Test
-    public void givenQuery_whenGetPokemon_thenAlphabeticOrder() throws Exception {
+    void givenQuery_whenGetPokemon_thenAlphabeticOrder() {
         var expect = List.of("bulbasaur", "ivysaur", "venusaur");
 
         var response = restTemplate.getForEntity("/pokemons?query=saur", PokemonResult.class);
@@ -52,7 +52,7 @@ public class PokemonControllerIntegrationTest {
     }
 
     @Test
-    public void givenQueryAndSortByLength_whenGetPokemon_thenLengthOrder() throws Exception {
+    void givenQueryAndSortByLength_whenGetPokemon_thenLengthOrder() {
         var expect = List.of("ivysaur", "venusaur", "bulbasaur");
 
         var response = restTemplate.getForEntity("/pokemons?query=saur&sort=length", PokemonResult.class);
@@ -68,7 +68,7 @@ public class PokemonControllerIntegrationTest {
     }
 
     @Test
-    public void givenValidRequest_whenGetPokemonHighlight_thenOk() throws Exception {
+    void givenValidRequest_whenGetPokemonHighlight_thenOk() {
         var response = restTemplate.getForEntity("/pokemons/highlight", PokemonHighlightResult.class);
 
         Assertions.assertEquals(200, response.getStatusCode().value());

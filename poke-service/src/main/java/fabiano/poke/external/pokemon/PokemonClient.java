@@ -1,18 +1,19 @@
-package fabiano.poke.external.pokemonApi;
+package fabiano.poke.external.pokemon;
 
-import fabiano.poke.external.pokemonApi.pokemonApiDtos.PokemonListResponse;
 import org.springframework.boot.web.client.RestTemplateBuilder;
 import org.springframework.stereotype.Component;
 import org.springframework.web.client.RestTemplate;
+
+import fabiano.poke.external.pokemon.dtos.PokemonListResponse;
 
 @Component
 public class PokemonClient {
 
     private final RestTemplate restTemplate;
 
-    private final String host = "https://pokeapi.co/api/v2";
+    private final static String host = "https://pokeapi.co/api/v2";
 
-    private final int LIMIT = 1000;
+    private final static int limit = 1000;
 
 
     public PokemonClient(RestTemplateBuilder restTemplateBuilder) {
@@ -22,7 +23,7 @@ public class PokemonClient {
     }
 
     public PokemonListResponse listAll() {
-        return restTemplate.getForObject(host + "/pokemon?limit=" + LIMIT, PokemonListResponse.class);
+        return restTemplate.getForObject(host + "/pokemon?limit=" + limit, PokemonListResponse.class);
     }
 
 }

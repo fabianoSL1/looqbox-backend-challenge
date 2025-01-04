@@ -1,8 +1,8 @@
-package fabiano.poke.sortMethods.impl;
+package fabiano.poke.sort.impl;
 
-import fabiano.poke.external.pokemonApi.pokemonApiDtos.PokemonResponse;
-import fabiano.poke.sortMethods.SortMethod;
-import fabiano.poke.sortMethods.algorithms.QuickSort;
+import fabiano.poke.external.pokemon.dtos.PokemonResponse;
+import fabiano.poke.sort.SortMethod;
+import fabiano.poke.sort.algorithms.QuickSort;
 
 import java.util.List;
 

@@ -13,7 +13,7 @@ import java.util.Arrays;
 import java.util.List;
 
 @ExtendWith(MockitoExtension.class)
-public class PokemonServiceTest {
+class PokemonServiceTest {
 
     @InjectMocks
     private PokemonService pokemonService;

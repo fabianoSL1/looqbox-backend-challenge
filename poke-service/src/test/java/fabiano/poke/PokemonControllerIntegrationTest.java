@@ -17,7 +17,7 @@ import java.util.List;
  */
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 @AutoConfigureMockMvc
-public class PokemonControllerIntegrationTest {
+class PokemonControllerIntegrationTest {
 
     @Autowired
     private TestRestTemplate restTemplate;

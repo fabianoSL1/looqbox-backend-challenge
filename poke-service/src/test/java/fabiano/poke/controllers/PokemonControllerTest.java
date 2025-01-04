@@ -12,7 +12,7 @@ import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
 
 @WebMvcTest(PokemonController.class)
-public class PokemonControllerTest {
+class PokemonControllerTest {
 
     @Autowired
     private MockMvc mvc;

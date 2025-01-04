@@ -11,9 +11,9 @@ public class PokemonClient {
 
     private final RestTemplate restTemplate;
 
-    private final static String host = "https://pokeapi.co/api/v2";
+    private static final String HOST = "https://pokeapi.co/api/v2";
 
-    private final static int limit = 1000;
+    private static final int LIMIT = 1000;
 
 
     public PokemonClient(RestTemplateBuilder restTemplateBuilder) {
@@ -23,7 +23,7 @@ public class PokemonClient {
     }
 
     public PokemonListResponse listAll() {
-        return restTemplate.getForObject(host + "/pokemon?limit=" + limit, PokemonListResponse.class);
+        return restTemplate.getForObject(HOST + "/pokemon?limit=" + LIMIT, PokemonListResponse.class);
     }
 
 }

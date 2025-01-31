@@ -41,9 +41,4 @@ porta `8080`
 docker compose up -d
 ```
 
-## deploy
-*A primeira requisição demora por conta do [render](https://render.com/).* 
-
-https://poke-service-m9z6.onrender.com/pokemons
-
 [![SonarCloud](https://sonarcloud.io/images/project_badges/sonarcloud-white.svg)](https://sonarcloud.io/summary/new_code?id=fabianoSL1_looqbox-backend-challenge)
